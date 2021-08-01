@@ -11,16 +11,28 @@
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
     "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "noFallthroughCasesInSwitch": true
   },
   "include": [
     "src"
-  ]
+  ],
+  "exclude": [
+    "build",
+    "node_modules"
+  ],
+  "files": [
+    "src/index.d.ts",
+    "src/externals.d.ts",
+    "src/styles/styled.d.ts"
+  ],
+  "extends": "./base-tsconfig.json"
 }
